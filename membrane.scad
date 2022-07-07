@@ -21,14 +21,14 @@ difference() {
         {
             rotate([0, 0, i * (360 / leaf_count) + leaf_rotation])
             {
-                color([0,1,0]) translate([0, leaf_circle_center, 0]){
+                translate([0, leaf_circle_center, 0]){
                     circle(d = leaf_diameter, $fn=circle_segments);
                 };
             };
             
             rotate([0, 0, i * (360 / leaf_count)])
             {
-                color([1,0,0]) polygon(
+                polygon(
                 [
                     [0, 0],
                     [leaf_circle_center - 0.5, -leaf_radius],
